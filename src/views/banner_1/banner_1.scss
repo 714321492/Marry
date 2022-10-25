@@ -1,0 +1,376 @@
+@import './animate';
+.banner_1_2_1_rotate{
+    animation:rotateAnimate_2_1 linear 30s infinite;
+}
+.banner_1_3_1_rotate{
+    animation:rotateAnimate_3_1 linear 60s infinite;
+}
+.banner_1_2_2_rotate{
+    animation:rotateAnimate_2_2 linear 30s infinite;
+}
+.banner_1_3_2_rotate{
+    animation:rotateAnimate_3_2 linear 60s infinite;
+}
+.paintBrushLeftTopAnimate{
+    animation:paintBrushLeftTopAnimate linear 5s infinite;
+    animation-iteration-count: 1;
+}
+.paintBrushRightTopAnimate{
+    animation:paintBrushRightTopAnimate linear 5s infinite;
+    animation-iteration-count: 1;
+}
+.paintBrushRightBottomAnimate{
+    animation:paintBrushRightBottomAnimate linear 5s infinite;
+    animation-iteration-count: 1;
+}
+.paintBrushLeftBottomAnimate{
+    animation:paintBrushLeftBottomAnimate linear 5s infinite;
+    animation-iteration-count: 1;
+}
+.paintBrushCenterLogoShow{
+    animation:paintBrushCenterLogoShow linear 5s infinite;
+    animation-iteration-count: 1;
+}
+.maobi1{
+    animation:xiezi1 linear 5s infinite;
+    animation-iteration-count: 1;
+}
+.maobi2{
+    animation:xiezi2 linear 5s infinite;
+    animation-iteration-count: 1;
+}
+.maobi3{
+    animation:xiezi3 linear 5s infinite;
+    animation-iteration-count: 1;
+}
+.maobi4{
+    animation:xiezi4 linear 5s infinite;
+    animation-iteration-count: 1;
+}
+.banner{
+    height: 100%;
+    .banner_cenetr{
+        position: absolute;
+        margin-left: 50%;
+        left: -25vh;
+        height: 100%;
+        width: 50vh;
+        z-index: 1002;
+        top: 0;
+        .center_text{
+            position: absolute;
+            transform:translateX(-50%) translateY(0);
+            margin-left: 50%;
+            top: 45vh;
+            display: none;
+            .maobi{
+                display: none;
+                right: 0;
+                //right: -2vh;
+                position: absolute;
+                z-index: 1;
+                width: 25%;
+                top: -10%;
+            }
+            .center_text_hide{
+                position: absolute;
+                width: 25%;
+                background: #fcf0d3;
+                //background: red;
+                height: 100%;
+                bottom: 0;
+                transition: all 5s linear 0ms;
+            }
+            .center_text_hide_2{
+                left: 25%;
+            }
+            .center_text_hide_3{
+                left: 50%;
+            }
+            .center_text_hide_4{
+                left: 75%;
+            }
+            .center_text_image{
+                height:35vh;
+            }
+        }
+        .center_logo{
+            position: absolute;
+            transform:translateX(-50%) translateY(0);
+            margin-left: 50%;
+            top: 20vh;
+            //border: 1px #aa1e2e solid;
+            border-radius: 50%;
+            width: 20vh;
+            height: 21vh;
+            .center_logo_show{
+                overflow: hidden;
+                width: calc(20vh + 2px);
+                height: 0;
+                position: absolute;
+                top: -1px;
+                left: -1px;
+                img {
+                    transition:all 2s linear 0ms;
+                    display: block;
+                    width: calc(20vh + 2px);
+                    height: calc(21vh + 2px);
+                    position: relative;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+        }
+        .center_logo_circular_left,.center_logo_circular_right{
+            position: absolute;
+            content: '';
+            width: calc(50% + 2px);
+            height: calc(100% + 2px);
+            right: -2px;
+            bottom: -1px;
+            background: #fcf0d3;
+            display: none;
+        }
+        .center_logo_circular_left{
+            left: -2px;
+            right: auto;
+            top: -1px;
+            bottom: auto;
+        }
+    }
+    .paintBrush_rotateAnimate{
+        animation: paintBrush_rotateAnimate_X 4s cubic-bezier(0.36,0,0.64,1) -2s infinite alternate,
+        paintBrush_rotateAnimate_Y 4s cubic-bezier(0.36,0,0.64,1)  0s infinite alternate;
+    }
+    .paintBrush{
+        position: absolute;
+        z-index: 1003;
+        height: 5vh;
+        color: blue;
+        left: calc(50% - 25vh);
+        top: -5vh;
+        transition: all 5s linear 0ms;
+        //left: calc(50% - 2vh);
+        //top: 16vh;
+        //animation-iteration-count: 1;
+    }
+    .banner_height{
+        position: relative;
+        background: url('../../assets/image/banner_backgtound.png');
+        background-size:auto 100%;
+        height: 50%;
+    }
+    .center_box{
+        height: 100%;
+        .center_box_2_3{
+            display: block;
+            margin: 0 auto;
+            height: 100%;
+        }
+        .center_top,.center_bottom{
+            width: 100%;
+            position: absolute;
+            margin-left: 50%;
+            left: -25vh;
+            height: 50vh;
+            //transform: translateX(-50%) translateY(0);
+        }
+        .center_open_top,.center_open_bottom{
+            height: 1.5vw;
+            opacity: 0;
+            width: 58.5vh;
+            margin-left: 50%;
+            left: -29.25vh;
+            position: absolute;
+            z-index: 1;
+        }
+        .center_img_top,.center_img_bottom{
+            opacity: 0;
+            left: 50%;
+            margin-left: -25vh;
+            bottom: 0;
+            position: absolute;
+            width: 50vh;
+            height: 0;
+            overflow: hidden;
+        }
+        .center_img_top{
+            .center_top_flower,.center_top_flower2{
+                position: absolute;
+                z-index: 102;
+                width: 0;
+                top: 1.4vw;
+                left: 0.35vw;
+                overflow: hidden;
+                img{
+                    width: 25vh;
+                    display: block;
+                }
+            }
+            .center_top_flower2{
+                top: 1.5vw;
+                width: auto;
+                left: auto;
+                right: 0.35vw;
+                height: 0;
+                img{
+                    height: 30vh;
+                    width: auto;
+                }
+            }
+        }
+        .center_img_bottom{
+            bottom: auto;
+            top: 0;
+            .center_bottom_flower,.center_bottom_flower2{
+                position: absolute;
+                z-index: 102;
+                bottom: 1.4vw;
+                right: calc(0.35vw + 20vh);
+                overflow: hidden;
+                width: 0;
+                img{
+                    width: 20vh;
+                    display: block;
+                }
+            }
+            .center_bottom_flower2{
+                bottom: calc(1.5vw + 30vh);
+                width: auto;
+                right: auto;
+                left: 0.35vw;
+                height: 0;
+                img{
+                    height: 30vh;
+                    width: auto;
+                }
+            }
+        }
+        .center_bottom,.center_open_bottom{
+            top: 0;
+        }
+        .center_top,.center_open_top {
+            bottom: 0;
+        }
+        .center_open_bottom{
+            transform: rotate(180deg);
+        }
+    }
+    .banner_1{
+        .banner_left,.banner_right{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            img{
+                display: block;
+                position: relative;
+            }
+            .line{
+                height: 15%;
+                left: 14vh;
+            }
+            .flower{
+                height: 10%;
+                left: 11.8vh;
+            }
+            .lantern{
+                transition: all .8s linear 0ms;
+                height: 65%;
+            }
+        }
+        .banner_1_2_left,.banner_1_2_right{
+            .line{
+                height: 10%;
+                left: 10.9vh;
+            }
+            .flower{
+                height: 7.5%;
+                left: 9.35vh;
+            }
+            .lantern{
+                height: 50%;
+            }
+        }
+        .banner_1_1_left{
+            left: 8vw;
+            .flower{
+                animation:banner_1_rotateAnimate ease-in-out 7s infinite alternate;
+            }
+            .lantern{
+                animation:banner_3_rotateAnimate linear 12s infinite alternate;
+            }
+        }
+        .banner_1_2_left{
+            left: 20vw;
+            .flower{
+                animation:banner_2_rotateAnimate ease-in-out 7s infinite alternate;
+            }
+            .lantern{
+                animation:banner_4_rotateAnimate linear 12s infinite alternate;
+            }
+        }
+        .banner_1_1_right{
+            right: 8vw;
+            .flower{
+                animation:banner_4_rotateAnimate ease-in-out 7s infinite alternate;
+            }
+            .lantern{
+                animation:banner_3_rotateAnimate linear 12s infinite alternate;
+            }
+        }
+        .banner_1_2_right{
+            right: 20vw;
+            .flower{
+                animation:banner_2_rotateAnimate ease-in-out 7s infinite alternate;
+            }
+            .lantern{
+                animation:banner_1_rotateAnimate linear 12s infinite alternate;
+            }
+        }
+    }
+    .banner_2{
+        //overflow: hidden;
+        z-index: 1;
+        .banner_1_1{
+            position: absolute;
+            width: 20vw;
+            left: 3.5vw;
+            top: 35vh;
+            z-index:101;
+            opacity: 0;
+            transition: all 3s linear 0ms;
+        }
+        .banner_1_1_1{
+            left: auto;
+            right: -1.5vw;
+            top: 5vh;
+        }
+        .banner_1_2,.banner_1_3{
+            position: absolute;
+            transition: all 3s linear 0ms;
+            opacity: 0;
+        }
+        .banner_1_2_1{
+            height: 110%;
+            top: -5%;
+            transform: translateX(-150%) translateY(0);
+        }
+        .banner_1_3_1{
+            height: 70%;
+            top: 15%;
+            transform: translateX(-150%) translateY(0);
+        }
+        .banner_1_2_2{
+            height: 90%;
+            top: 5%;
+            transform: translateX(100%) translateY(0);
+            right: 0;
+        }
+        .banner_1_3_2{
+            height: 50%;
+            top: 25%;
+            transform: translateX(100%) translateY(0);
+            right: 0;
+        }
+    }
+}

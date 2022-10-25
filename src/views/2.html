@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="pre"></div>
+</body>
+<script src="./jquery.js"></script>
+<script>
+    $(() => {
+      $.LoadCommandLine([
+        '正在初始化...',
+        '加载xx...',
+        '加载模块...',
+        '加载脚本...',
+        '启动完毕...',
+        '欢迎使用！'
+      ], function () {
+        alert('显示完毕！');
+      });
+    })
+  $.LoadCommandLine = function (arr,callback) {
+    if (arr.length > 0) {
+      //处理逻辑 ①
+
+      //显示 ②
+      var id = getRandomString(5);
+      $("#pre").append('<pre id="' + id + '" class="pre"></pre>');
+      var index = 0;
+      var IntervalId = 0;
+      var r = RandomNum(10, 200); //假装在处理，时快时慢
+      IntervalId = setInterval(function () {
+
+        $("#" + id).text(arr[0].substring(0, index++));
+        if (index > arr[0].length) {
+          clearInterval(IntervalId);
+        }
+        //console.log(index + " " + str.length);
+      }, r);
+
+      //下一个
+      setTimeout(function () {
+        $.LoadCommandLine(arr.slice(1), callback);
+      }, (r * arr[0].length));
+
+      if ($(".pre").length > 5) $("#pre").find("pre:first-child").remove();
+
+    }else{ callback(); }
+  }
+</script>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>基于SVG和CSS3的可爱卡通小动物动画特效|DEMO2_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link href='https://fonts.googleapis.com/css?family=Freckle+Face' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	<link rel="stylesheet" type="text/css" href="css/fox.css" />
+</head>
+<body class="demo-fox">
+	<div class="snow"></div>
+		<div class="container">
+			<header class="htmleaf-header">
+				<div class="htmleaf-links">
+					<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+					<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/html5/SVG/201603233250.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+				</div>
+				<h1>Animated Animals</h1>
+				<nav class="htmleaf-demos">
+					<a class="current-demo" href="index.html" title="Alex the CSS Husky"><img src="img/link-husky.png" alt="Alex the Husky"/></a>
+					<a href="index2.html" title="Felix the CSS/SVG Fox"><img src="img/link-fox.png" alt="Felix the Fox"/></a>
+				</nav>
+				<p class="info">Please view on a desktop <br/>(Chrome only)</p>
+			</header>
+			<div class="content content--fox">
+				<div class="fox">
+					<div class="fox-body">
+						<div class="fox-front-leg"></div>
+						<div class="fox-front-leg"></div>
+					</div>
+					<div class="fox-head">
+						<div class="fox-face">
+							<div class="fox-ears">
+								<div class="fox-ear"></div>
+								<div class="fox-ear"></div>
+							</div>
+							<div class="fox-skull"></div>
+							<div class="fox-front"></div>
+							<div class="fox-eyes"></div>
+							<div class="fox-nose"></div>
+						</div>
+					</div>
+					<div class="fox-tail">
+						<div class="fox-tail">
+							<div class="fox-tail">
+								<div class="fox-tail">
+									<div class="fox-tail">
+										<div class="fox-tail">
+											<div class="fox-tail">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
+					<defs>
+						<filter id="squiggly-0">
+							<feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
+							<feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="2" />
+						</filter>
+						<filter id="squiggly-1">
+							<feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
+							<feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+						</filter>
+						<filter id="squiggly-2">
+							<feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
+							<feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+						</filter>
+						<filter id="squiggly-3">
+							<feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
+							<feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+						</filter>
+						<filter id="squiggly-4">
+							<feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
+							<feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
+						</filter>
+					</defs>
+				</svg>
+			</div><!-- /content -->
+		</div><!-- /container -->
+</body>
+</html>
